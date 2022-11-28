@@ -1,0 +1,16 @@
+{
+  "perfil": {
+     "puesto": "Oracle Developer",
+     "Descripcion": "Lover of Technology and innovation"  
+  },
+  "experiencia": {
+      "Expirience__time": "April 2022 Current",
+      "Expirience__job": "Front End Developer",
+      "Expirience__description": "Here goes my development"
+  },
+  "Projects": {
+      "card__title": "Landing Page",
+      "card__text": "Here it's information about my others pages"
+  }
+}
+  
