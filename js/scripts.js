@@ -3,39 +3,23 @@ const toggleTheme  = document.getElementById('toggle-theme');
 const toggleIcon   = document.getElementById('toggle-icon');
 const toggleText   = document.getElementById('toggle-text'); 
 const toggleColors = document.getElementById('toggle-colors');
-
 const rootStyles = document.documentElement.style;
 
-/*const flagsElement = document.getElementById("flags");
-const textToChange = document.querySelectorAll("[data-section]");
- const changeLanguage = async (language) => {
-	const requestJson = await fetch(`./languages/${language}.json`);
-	const text = await requestJson.json();
-	for (const textsToChange of textToChange){
-		 const section = textsToChange.dataset.section;
-		 const value   = textsToChange.dataset.value;
-
-		//console.log(section, value);
-		textsToChange.innerHTML= text[section][value];
-	}
-
- };
-flagsElement.addEventListener("click", (e)=> {
-	changeLanguage(e.target.parentElement.dataset.language);
-});*/
-
-toggleTheme.addEventListener('click', ()=> {
-	document.body.classList.toggle('dark');
-	if (toggleIcon.src.includes('moon.svg')){
-		toggleIcon.src = 'assets/icons/sun.svg';
-		toggleText.textContent = 'Light Mode';
+toggleTheme.addEventListener("click",() => {
+	  document.body.classList.toggle('Dark');
+	if (toggleIcon.src.includes("moon.svg")) {
+		toggleIcon.src= "assets/icons/sun.svg";		
+		toggleText.textContent = "Light Mode"	
+		rootStyles.setProperty('--bg-card-color', "hsl(248,53%, 58%)");
 	} else {
-		toggleIcon.src = 'assets/icons/moon.svg';
-		//toggleText.textContent = 'Portafolio Profesional'; 
-	  }  
+        toggleIcon.src = "assets/icons/moon.svg";
+		toggleText.textContent = 'Dark Mode';	
+		rootStyles.setProperty('--bg-card-color',"hsl(248, 49%, 35%)");
+	}
 });
 
-	  
-	toggleColors.addEventListener('click', (e) => {
-		rootStyles.setProperty('--primary-color', e.target.dataset.color); 
-    });
+toggleColors.addEventListener('click', (e) => {
+	rootStyles.setProperty('--primary-color', e.target.dataset.color);
+	
+});
+
