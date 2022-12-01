@@ -10,11 +10,11 @@ toggleTheme.addEventListener("click",() => {
 	if (toggleIcon.src.includes("moon.svg")) {
 		toggleIcon.src= "assets/icons/sun.svg";		
 		toggleText.textContent = "Light Mode"	
-		rootStyles.setProperty('--bg-card-color', "hsl(248,53%, 58%)");
+		rootStyles.setProperty('--bg-card-color', "hsl(0, 0%, 39%)");
 	} else {
         toggleIcon.src = "assets/icons/moon.svg";
 		toggleText.textContent = 'Dark Mode';	
-		rootStyles.setProperty('--bg-card-color',"hsl(248, 49%, 35%)");
+		rootStyles.setProperty('--bg-card-color',"hsl(0, 0%, 31%)");
 	}
 });
 
